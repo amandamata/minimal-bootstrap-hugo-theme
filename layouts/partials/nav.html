@@ -3,5 +3,8 @@
     {{ range .Site.Menus.nav }}
     <a href="{{ .URL }}">{{ .Name }}</a>
     {{ end }}
+    {{ range .Site.Home.AllTranslations }}
+    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+    {{ end }}
   </div>
 </nav>
